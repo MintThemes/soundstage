@@ -1,0 +1,56 @@
+.item-block .visual img,
+.button,
+.page-flipping a,
+.text-holder .visual img,
+#main .flex-nav-container,
+.input-form .area.focus,
+.input-form .txt.focus,
+.comments-list .visual img,
+.comments-list .text,
+.photo-list img,
+.team-list .visual,
+.team-list .visual img,
+.team-list li,
+.submit,
+.social-block,
+.catalog .visual img,
+.catalog .visual,
+.preview-block .visual img,
+.preview-block .visual,
+.news .btn-more,
+.news .visual img,
+.item-block .video-title,
+.item-block .video img,
+.item-box,
+.item-block > .block,
+#nav > li ul{behavior: url(css/PIE.htc);}
+*+html .catalog .visual img,
+*+html .item-list li{vertical-align:top;}
+*+html .text-holder blockquote .rq,
+*+html .footer-social a,
+*+html .catalog li,
+*+html .news .btn-more,
+*+html .news li,
+*+html .item-box .more{
+	display:inline;
+	zoom:1;
+}
+*+html .simple-list .text,
+*+html .social-block,
+*+html .item-list li{height:1%;}
+*+html .comments-list li{display:block;}
+*+html .comments-list .visual{
+	float:left;
+	margin-top: expression(this.parentNode.offsetHeight > this.offsetHeight ? ((this.parentNode.offsetHeight-this.offsetHeight)/2 + "px") : "0");
+}
+*+html .comments-list .text{
+	display:block;
+	overflow:hidden;
+	height:1%;
+}
+.photo-list img{
+	-webkit-box-shadow:0px 2px 3px rgba(10, 10, 10, 0.08);
+	-moz-box-shadow:0px 2px 3px rgba(10, 10, 10, 0.08);
+	box-shadow:0px 2px 3px rgba(10, 10, 10, 0.08);
+}
+* +html .comments-list .visual a{filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100) !important;}

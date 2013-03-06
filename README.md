@@ -1,4 +1,4 @@
-soundstage
-==========
+Soundstage-Theme
+================
 
-Soundstage Theme
+Soundstage Theme Git

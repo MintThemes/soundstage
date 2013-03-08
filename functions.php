@@ -132,7 +132,9 @@ if ( ! function_exists( 'mt_soundstage_setup' ) ):
 	//require('includes/update-notifier.php');
 	
 	//AQ RESIZER:
-	require('includes/aq_resizer.php');
+	require( get_template_directory() . '/includes/aq_resizer/aq-resizer.php' );
+	require( get_template_directory() . '/includes/aq_resizer/aq-resizer-ratio-check.php' );
+
 	
 	//jPlayer HTML 5 mp3/ogg player
 	require_once ($includes_path . 'jplayer.php'); 	
@@ -155,27 +157,19 @@ if ( ! function_exists( 'mt_soundstage_setup' ) ):
 	/** WooCommerce */
 	require_once( get_template_directory() . '/includes/woocommerce.php' );
 	
-	//dashboard help widget ------------
-	add_action('wp_dashboard_setup', 'mt_soundstage_my_custom_dashboard_widgets');
-	
-	function mt_soundstage_my_custom_dashboard_widgets() {
-		global $wp_meta_boxes;
-		
-		// Global the $wp_meta_boxes variable (this will allow us to alter the array)
-		global $wp_meta_boxes;
-		
-		// Then we make a backup of your widget
-		$my_widget = $wp_meta_boxes['dashboard']['normal']['core']['custom_help_widget'];
-		
-		// We then unset that part of the array
-		unset($wp_meta_boxes['dashboard']['normal']['core']['custom_help_widget']);
-		
-		// Now we just add your widget back in
-		$wp_meta_boxes['dashboard']['side']['core']['custom_help_widget'] = $my_widget;
+	/**
+	 * load woocommerce styles from woocommerce stylesheet included in the theme's css folder
+	 **/
+	function wp_enqueue_woocommerce_style(){
+		wp_register_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css' );
+		if ( class_exists( 'woocommerce' ) ) {
+			wp_dequeue_style('woocommerce_frontend_styles');
+			wp_register_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css' );
+			wp_enqueue_style( 'woocommerce' );
+		}
 	}
-	
-	
-	
+	add_action( 'wp_enqueue_scripts', 'wp_enqueue_woocommerce_style', 50 );
+		
 	//Get current Page name:
 	function mt_soundstage_curPageName() {
 	 return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
@@ -192,6 +186,11 @@ if ( ! function_exists( 'mt_soundstage_setup' ) ):
 	
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
+		
+		/**
+		 * Declare support for WooCommerce
+		 */
+		add_theme_support( 'woocommerce' );
 	
 		// Make theme available for translation
 		// Translations can be filed in the /languages/ directory

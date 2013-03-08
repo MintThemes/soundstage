@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.1.9 - March 8, 2013
+WooCommerce 2.0 Support
+
 1.0.1.8 - February 25, 2013
 Display:block in various areas
 

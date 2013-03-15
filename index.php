@@ -107,7 +107,7 @@ for ( $i = 1; $i <= 6; $i++ ) {
                 ) );
     
                 if( $merch->have_posts() ) : while( $merch->have_posts() ) : $merch->the_post();
-                    $product = new WC_Product( $post->ID ); 
+                    $product = get_product();
     
                     if ( $num == 0 ) : ?>             
                         <div class="preview">

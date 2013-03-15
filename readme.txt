@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.2.0 - March 15, 2013
+Fixed home page price issue
+
 1.0.1.9 - March 8, 2013
 WooCommerce 2.0 Support
 

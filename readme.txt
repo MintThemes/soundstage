@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.2.2 - March 30, 2013
+Removed Theme Docs from theme as they are offered separately
+
 1.0.2.1 - March 30, 2013
 Fixed variations in WooCommerce 2.0
 Created single-product.php

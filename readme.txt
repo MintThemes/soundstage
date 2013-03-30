@@ -7,6 +7,10 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.2.1 - March 30, 2013
+Fixed variations in WooCommerce 2.0
+Created single-product.php
+
 1.0.2.0 - March 15, 2013
 Fixed home page price issue
 

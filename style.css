@@ -2,7 +2,7 @@
 Theme Name: Soundstage
 Theme URI: http://mintthemes.com
 Description: A theme for Bands
-Version: 1.0.2.0
+Version: 1.0.2.1
 Author: Mint Themes
 Author URI: http://mintthemes.com
 License: GNU General Public License
@@ -492,11 +492,11 @@ q:after{content:"";}
 	-moz-border-radius:3px 3px 0 0;
 	border-radius:3px 3px 0 0;
 }
-.item-block .sticker{
+.item-block .price .amount{
 	font-size:13px;
 	line-height:40px;
 }
-.item-block .sticker a{
+.item-block .price .amount a{
 	color:#FEFEFE;
 }
 .jp-interface{
@@ -815,7 +815,7 @@ q:after{content:"";}
 	background:url(css/images/catalog-mask.png);
 
 }
-.sticker{
+.price .amount{
 	position:absolute;
 	padding: 0 10px;
 	height:42px;
@@ -927,7 +927,7 @@ q:after{content:"";}
 .product-form .variations .row select {
 	width: 231px !important;
 }
-.product-form label,
+.product label,
 .product_meta label{
 	font:18px/29px WebfontBold, Arial, Helvetica, Sans-Serif;
 	color:#141618;
@@ -935,7 +935,7 @@ q:after{content:"";}
 	min-width:75px;
 	padding:0 12px 0 0;
 }
-.input-number,
+.quantity,
 body .product-quantity .quantity.buttons_added {
 	float:left;
 	position:relative;
@@ -945,9 +945,9 @@ body .product-quantity .quantity.buttons_added {
 	background:url(css/images/bg-input-number.png) no-repeat;
 	margin:0 19px 0 0;
 }
-.row .input-number .qty,
+.row .quantity .qty,
 body .product-quantity .quantity.buttons_added .qty,
-#content .quantity input.qty{
+.quantity input.qty{
 	float:left;
 	width:100%;
 	padding:0;
@@ -956,8 +956,8 @@ body .product-quantity .quantity.buttons_added .qty,
 	height:16px;
 	text-align:center;
 }
-.input-number input.plus,
-.input-number input.minus,
+.quantity input.plus,
+.quantity input.minus,
 .product-quantity .quantity.buttons_added input.plus,
 .product-quantity .quantity.buttons_added input.minus,
 #content .quantity input.plus,
@@ -972,20 +972,20 @@ body .product-quantity .quantity.buttons_added .qty,
 	top:0;
 	border: 0;
 }
-.input-number input.plus:hover,
+.quantity input.plus:hover,
 .product-quantity .quantity.buttons_added input.plus:hover,
 #content .quantity input.plus:hover {
 	background:url(css/images/btn-inc-dec.png) no-repeat;
 	background-position:-16px 0;
 }
-.input-number input.minus,
+.quantity input.minus,
 .product-quantity .quantity.buttons_added input.minus,
 #content .quantity input.minus{
 	background-position:0 -16px;
 	top:auto;
 	bottom:1px;
 }
-.input-number input.minus:hover,
+.quantity input.minus:hover,
 .product-quantity .quantity.buttons_added input.minus:hover,
 #content .quantity input.minus:hover{
 	background:url(css/images/btn-inc-dec.png) no-repeat;
@@ -1848,15 +1848,15 @@ input[type="text"] {
 	width: 100%;
 }
 
-.price.sticker,
-.price.sticker del {
+.price.price .amount,
+.price.price .amount del {
 	color: #FFF !important;
 }
 
 div.product span.price {
 }
 
-.price.sticker ins {
+.price.price .amount ins {
 	background: none !important;
 }
 
@@ -2462,11 +2462,11 @@ q:after{content:"";}
 	-moz-border-radius:3px 3px 0 0;
 	border-radius:3px 3px 0 0;
 }
-.item-block .sticker{
+.item-block .price .amount{
 	font-size:13px;
 	line-height:40px;
 }
-.item-block .sticker a{
+.item-block .price .amount a{
 	color:#FEFEFE;
 }
 .jp-interface{
@@ -2785,7 +2785,7 @@ q:after{content:"";}
 	background:url(css/images/catalog-mask.png);
 
 }
-.sticker{
+.price .amount{
 	position:absolute;
 	padding: 0 10px;
 	height:42px;
@@ -2897,7 +2897,7 @@ q:after{content:"";}
 .product-form .variations .row select {
 	width: 231px !important;
 }
-.product-form label,
+.product label,
 .product_meta label{
 	font:18px/29px WebfontBold, Arial, Helvetica, Sans-Serif;
 	color:#141618;
@@ -2905,7 +2905,7 @@ q:after{content:"";}
 	min-width:75px;
 	padding:0 12px 0 0;
 }
-.input-number,
+.quantity,
 body .product-quantity .quantity.buttons_added {
 	float:left;
 	position:relative;
@@ -2915,9 +2915,9 @@ body .product-quantity .quantity.buttons_added {
 	background:url(css/images/bg-input-number.png) no-repeat;
 	margin:0 19px 0 0;
 }
-.row .input-number .qty,
+.row .quantity .qty,
 body .product-quantity .quantity.buttons_added .qty,
-#content .quantity input.qty{
+.quantity input.qty{
 	float:left;
 	width:100%;
 	padding:0;
@@ -2926,8 +2926,8 @@ body .product-quantity .quantity.buttons_added .qty,
 	height:16px;
 	text-align:center;
 }
-.input-number input.plus,
-.input-number input.minus,
+.quantity input.plus,
+.quantity input.minus,
 .product-quantity .quantity.buttons_added input.plus,
 .product-quantity .quantity.buttons_added input.minus,
 #content .quantity input.plus,
@@ -2942,20 +2942,20 @@ body .product-quantity .quantity.buttons_added .qty,
 	top:0;
 	border: 0;
 }
-.input-number input.plus:hover,
+.quantity input.plus:hover,
 .product-quantity .quantity.buttons_added input.plus:hover,
 #content .quantity input.plus:hover {
 	background:url(css/images/btn-inc-dec.png) no-repeat;
 	background-position:-16px 0;
 }
-.input-number input.minus,
+.quantity input.minus,
 .product-quantity .quantity.buttons_added input.minus,
 #content .quantity input.minus{
 	background-position:0 -16px;
 	top:auto;
 	bottom:1px;
 }
-.input-number input.minus:hover,
+.quantity input.minus:hover,
 .product-quantity .quantity.buttons_added input.minus:hover,
 #content .quantity input.minus:hover{
 	background:url(css/images/btn-inc-dec.png) no-repeat;
@@ -3818,8 +3818,8 @@ input[type="text"] {
 	width: 100%;
 }
 
-.price.sticker,
-.price.sticker del {
+.price.price .amount,
+.price.price .amount del {
 	color: #FFF !important;
 }
 
@@ -3830,7 +3830,7 @@ div.product span.price {
 	display:none;
 }
 
-.price.sticker ins {
+.price.price .amount ins {
 	background: none !important;
 }
 
@@ -3943,3 +3943,8 @@ div.product form.cart,
 .product .thumbnails{
 	display:none;	
 }
+
+.summary .entry-title, .reset_variations{
+	display:none;
+}
+

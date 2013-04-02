@@ -145,7 +145,9 @@
                         'post_type' => 'attachment',
                         'numberposts' => -1,
                         'post_status' => null,
-                        'post_parent' => get_the_ID()
+                        'post_parent' => get_the_ID(),
+						'orderby' => 'menu_order',
+						'order' => 'ASC',
                         ); 
                     $attachments = get_posts($args);
                     $currentAttachmentNum = 0;
@@ -167,7 +169,9 @@
                         'post_type' => 'attachment',
                         'numberposts' => -1,
                         'post_status' => null,
-                        'post_parent' => get_the_ID()
+                        'post_parent' => get_the_ID(),
+						'orderby' => 'menu_order',
+						'order' => 'ASC',
                         ); 
                     $attachments = get_posts($args);
                     //print_r($attachments);

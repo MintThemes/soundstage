@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.2.3 - April 2, 2013
+Added 'orderby' => 'menu_order' to discography
+
 1.0.2.2 - March 30, 2013
 Removed Theme Docs from theme as they are offered separately
 

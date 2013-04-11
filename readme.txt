@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.2.4 - April 11, 2013
+Fixed price stickers on homepage music player
+
 1.0.2.3 - April 2, 2013
 Added 'orderby' => 'menu_order' to discography
 

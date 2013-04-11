@@ -261,8 +261,13 @@ function jplayer_code( $args = array() ) {
 			$img_url = wp_get_attachment_url( $thumb,'full'); //get img URL
 	    	
 	    	if ( $img_url != "" ) :
-    ?>
+    ?><div class="widget-album-cover">
 		<img src="<?php echo aq_resize( $img_url, 306, 304, true );  ?>" width="306" height="304" alt="<?php the_title(); ?>" />
+        
+        <?php if (get_post_meta($post_id, "soundstage_buy_disc", true) != ""){?>
+            <span class="sticker"><a href="<?php echo get_post_meta($post_id, "soundstage_buy_disc", true); ?>"><?php _e('buy', 'mt_soundstage_translation'); ?></a></span>
+        <?php } ?>
+       </div>
 	<?php endif; endif; ?>     
 
 	<div id="jquery_jplayer_main" class="jp-jplayer"></div>

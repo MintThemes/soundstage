@@ -2,7 +2,7 @@
 Theme Name: Soundstage
 Theme URI: http://mintthemes.com
 Description: A theme for Bands
-Version: 1.0.2.3
+Version: 1.0.2.4
 Author: Mint Themes
 Author URI: http://mintthemes.com
 License: GNU General Public License
@@ -492,11 +492,11 @@ q:after{content:"";}
 	-moz-border-radius:3px 3px 0 0;
 	border-radius:3px 3px 0 0;
 }
-.item-block .price .amount{
+.item-block .price .amount, .sticker{
 	font-size:13px;
 	line-height:40px;
 }
-.item-block .price .amount a{
+.item-block .price .amount a, .sticker a{
 	color:#FEFEFE;
 }
 .jp-interface{
@@ -815,7 +815,7 @@ q:after{content:"";}
 	background:url(css/images/catalog-mask.png);
 
 }
-.price .amount{
+.price .amount, .sticker{
 	position:absolute;
 	padding: 0 10px;
 	height:42px;
@@ -1849,7 +1849,7 @@ input[type="text"] {
 }
 
 .price.price .amount,
-.price.price .amount del {
+.price.price .amount del, .sticker {
 	color: #FFF !important;
 }
 
@@ -2462,7 +2462,7 @@ q:after{content:"";}
 	-moz-border-radius:3px 3px 0 0;
 	border-radius:3px 3px 0 0;
 }
-.item-block .price .amount{
+.item-block .price .amount, .sticker{
 	font-size:13px;
 	line-height:40px;
 }
@@ -2785,7 +2785,7 @@ q:after{content:"";}
 	background:url(css/images/catalog-mask.png);
 
 }
-.price .amount{
+.price .amount, .sticker{
 	position:absolute;
 	padding: 0 10px;
 	height:42px;
@@ -3947,4 +3947,6 @@ div.product form.cart,
 .summary .entry-title, .reset_variations{
 	display:none;
 }
-
+.widget-album-cover{
+	position:relative;
+}

@@ -2,7 +2,7 @@
 Theme Name: Soundstage
 Theme URI: http://mintthemes.com
 Description: A theme for Bands
-Version: 1.0.2.4
+Version: 1.0.2.5
 Author: Mint Themes
 Author URI: http://mintthemes.com
 License: GNU General Public License
@@ -832,36 +832,36 @@ q:after{content:"";}
 	box-shadow:none;
 	right:auto;
 }
-.catalog.product{padding-bottom:11px;}
-.catalog{
+.related.product, .catalog.product{padding-bottom:11px;}
+.related .products, .catalog.products{
 	list-style:none;
 	margin:0 0 0 -30px !important;
 	padding:0;
 	font:18px/20px WebfontBold, Arial, Helvetica, Sans-Serif;
 	width:1008px;
 }
-.catalog a{
+.related a, .catalog a{
 	text-decoration:none;
 	color:#444;
 }
-.catalog a:hover{color:#dd5c1a;}
-.catalog li{
+.related a:hover, .catalog a:hover{color:#dd5c1a;}
+.related li, .catalog li{
 	display:inline-block;
 	vertical-align:top;
 	padding:0 0 17px 25px;
 	width:222px;
 	position: relative;
 }
-.catalog.product li{
+.related.product li, .catalog.product li{
 	width:306px;
 	padding-bottom:38px;
 }
-.catalog.product li .onsale {
+.related.product li .onsale, .catalog.product li .onsale {
 	top: -6px;
 	right: -6px;
 	left: auto;
 }
-.catalog.product .visual{
+.related.product .visual, .catalog.product .visual{
 	-webkit-border-radius:0;
 	-moz-border-radius:0;
 	border-radius:0;
@@ -869,7 +869,7 @@ q:after{content:"";}
 	-moz-box-shadow:none;
 	box-shadow:none;
 }
-.catalog .visual{
+.related .visual, .catalog .visual{
 	position:relative;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
@@ -879,7 +879,7 @@ q:after{content:"";}
 	box-shadow:0px 2px 3px rgba(200, 200, 200, 0.4);
 	margin:0 0 10px;
 }
-.catalog .visual .mask{
+.related .visual .mask, .catalog .visual .mask{
 	display:block;
 	position:absolute;
 	width:100%;
@@ -891,18 +891,18 @@ q:after{content:"";}
 	-moz-border-radius:3px;
 	border-radius:3px;
 }
-.catalog .visual img{
+.related .visual img, .catalog .visual img{
 	display:block;
 	position:relative;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius:3px;
 }
-.preview-block .catalog{
+.preview-block .related{
 	float:right;
 	width:504px;
 }
-.preview-block .catalog li{padding-bottom:37px;}
+.preview-block .related li{padding-bottom:37px;}
 .preview-block .text{
 	float:right;
 	width:489px;
@@ -1329,9 +1329,6 @@ input[type=submit]:hover,
 #main .text-holder h2{
 	font-size:24px;
 	line-height:30px;
-	margin:0;
-	padding:0;
-	background:none;
 }
 .text-holder p{margin:0 0 19px;}
 .text-holder p a{color:#da6427;}
@@ -2802,36 +2799,36 @@ q:after{content:"";}
 	box-shadow:none;
 	right:auto;
 }
-.catalog.product{padding-bottom:11px;}
-.catalog{
+.related.product, .catalog.product{padding-bottom:11px;}
+.related .products, .catalog .products{
 	list-style:none;
-	margin:0 0 0 -30px !important;
+	margin:0 0 0 -24px !important;
 	padding:0;
 	font:18px/20px WebfontBold, Arial, Helvetica, Sans-Serif;
 	width:1008px;
 }
-.catalog a{
+.related a, .catalog a{
 	text-decoration:none;
 	color:#444;
 }
-.catalog a:hover{color:#dd5c1a;}
-.catalog li{
+.related a:hover, .catalog a:hover{color:#dd5c1a;}
+.related li, .catalog li{
 	display:inline-block;
 	vertical-align:top;
 	padding:0 0 17px 25px;
 	width:222px;
 	position: relative;
 }
-.catalog.product li{
+.related.product li, .catalog.product li{
 	width:306px;
 	padding-bottom:38px;
 }
-.catalog.product li .onsale {
+.related.product li .onsale, .catalog.product li .onsale {
 	top: -6px;
 	right: -6px;
 	left: auto;
 }
-.catalog.product .visual{
+.related.product .visual, .catalog.product .visual{
 	-webkit-border-radius:0;
 	-moz-border-radius:0;
 	border-radius:0;
@@ -2839,7 +2836,7 @@ q:after{content:"";}
 	-moz-box-shadow:none;
 	box-shadow:none;
 }
-.catalog .visual{
+.related .visual, .catalog .visual{
 	position:relative;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
@@ -2849,7 +2846,7 @@ q:after{content:"";}
 	box-shadow:0px 2px 3px rgba(200, 200, 200, 0.4);
 	margin:0 0 10px;
 }
-.catalog .visual .mask{
+.related .visual .mask, .catalog .visual .mask{
 	display:block;
 	position:absolute;
 	width:100%;
@@ -2861,18 +2858,18 @@ q:after{content:"";}
 	-moz-border-radius:3px;
 	border-radius:3px;
 }
-.catalog .visual img{
+.related .visual img, .catalog .visual img{
 	display:block;
 	position:relative;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius:3px;
 }
-.preview-block .catalog{
+.preview-block .related{
 	float:right;
 	width:504px;
 }
-.preview-block .catalog li{padding-bottom:37px;}
+.preview-block .related li{padding-bottom:37px;}
 .preview-block .text{
 	float:right;
 	width:489px;
@@ -3299,9 +3296,6 @@ input[type=submit]:hover,
 #main .text-holder h2{
 	font-size:24px;
 	line-height:30px;
-	margin:0;
-	padding:0;
-	background:none;
 }
 .text-holder p{margin:0 0 19px;}
 .text-holder p a{color:#da6427;}
@@ -3947,6 +3941,17 @@ div.product form.cart,
 .summary .entry-title, .reset_variations{
 	display:none;
 }
-.widget-album-cover{
+.widget-album-cover, .catalog .visual{
 	position:relative;
+}
+.related .sticker, .catalog .sticker{
+	background:none;
+}
+.related .products .visual img{
+	max-width:222px;
+	max-height:193px;	
+}
+.catalog{
+	margin-left:-70px!important;	
+	font: 18px/20px WebfontBold, Arial, Helvetica, Sans-Serif;
 }

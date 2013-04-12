@@ -42,3 +42,28 @@ function woocommerce_after_single_product_summary() {
 	echo '</div>';
 }
 add_action( 'woocommerce_single_product_summary', 'woocommerce_after_single_product_summary', 100 );
+
+/**
+ * Hook in on activation
+ */
+global $pagenow;
+add_action( 'init', 'yourtheme_woocommerce_image_dimensions', 1 );
+ 
+/**
+ * Define image sizes
+ */
+function yourtheme_woocommerce_image_dimensions() {
+	
+	$shop_single_image_size['width'] 	= '469';
+	$shop_single_image_size['height'] = '469';
+	$shop_single_image_size['crop'] 	= '1';
+	 
+	return $shop_single_image_size;
+	
+}
+add_filter( 'woocommerce_get_image_size_shop_single', 'yourtheme_woocommerce_image_dimensions' ); 	// Single image height
+
+function mt_soundstage_single_product_large_thumbnail_size(){
+	return 'shop_single_image_size';
+}
+//add_filter('single_product_large_thumbnail_size', 'mt_soundstage_single_product_large_thumbnail_size');

@@ -2,7 +2,7 @@
 Theme Name: Soundstage
 Theme URI: http://mintthemes.com
 Description: A theme for Bands
-Version: 1.0.2.5
+Version: 1.0.2.6
 Author: Mint Themes
 Author URI: http://mintthemes.com
 License: GNU General Public License
@@ -2376,6 +2376,7 @@ q:after{content:"";}
 }
 .item-list .btn:hover{background-position:0 -21px;}
 .item-box, .jp-controls{
+	margin-top:0px;
 	position:relative;
 	text-align:center;
 	min-height:68px;

@@ -519,3 +519,23 @@ function mt_soundstage_favicon(){
 	}
 }
 add_action( 'wp_head', 'mt_soundstage_favicon' );
+
+//Get posts by category function
+function mt_soundstage_get_posts_by_cat($catid){
+	$category_query_args = array(
+		'cat' => $catid
+	);
+	
+	$category_query = new WP_Query( $category_query_args );	
+	
+	if ( $category_query->have_posts() ) {
+		 while ( $category_query->have_posts() ) { 
+			 $category_query->the_post();
+			// Loop output goes here
+			$return_array[get_the_ID()] = get_the_title(); 
+			
+		 }
+	}
+	
+	return $return_array;
+}

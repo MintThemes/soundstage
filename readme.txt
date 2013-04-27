@@ -7,6 +7,10 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.2.6 - April 27, 2013
+Fixed margin-top spacing on music player controls
+Added 'orderby' => 'menu_order' to jplayer.php
+
 1.0.2.5 - April 11, 2013
 Fixed sizing of images by adding a filter for image size on single product in woo commerce.php
 

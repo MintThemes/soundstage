@@ -53,6 +53,26 @@ if ( !function_exists( 'aq_resize' ) ){
 		if ($aq_width > ($orig_w) || $aq_height > ($orig_h)){	
 			$aq_width = $width;
 			$aq_height = $height;
+			
+			//If the original width and height of the image are not larger than the passed-in values, find the lowest common denominator and create a cropped image at the same ratio
+			if ($aq_width > ($orig_w) || $aq_height > ($orig_h)){	
+				//If the width is greater than the height
+				if ( $aq_width > $aq_height ){
+					
+					//Find the lowest common denominator of width=? when height=1
+					$width_lcd = $aq_width / $aq_height;
+					
+					//Find the value which we need to multiply 1 by to get the correct height ratio
+					$height_multiplier = $orig_w / $width_lcd;
+					
+					//Multiply the height multiplier by 1 to get the height
+					$aq_height = 1 * $height_multiplier;
+					
+					//return $aq_height; 
+					
+					$aq_width = $orig_w;
+				}
+			}
 		}
 		
 		//get image size after cropping
@@ -73,9 +93,9 @@ if ( !function_exists( 'aq_resize' ) ){
 			$dst_h = $orig_h;
 		}
 		//else check if cache exists
-		//elseif(file_exists($destfilename) && getimagesize($destfilename)) {
-			//$img_url = "{$upload_url}{$dst_rel_path}-{$suffix}.{$ext}";
-		//}
+		elseif(file_exists($destfilename) && getimagesize($destfilename)) {
+			$img_url = "{$upload_url}{$dst_rel_path}-{$suffix}.{$ext}";
+		}
 		//else, we resize the image and return the new resized image url
 		else {
 						

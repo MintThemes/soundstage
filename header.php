@@ -29,7 +29,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/flexslider.css" />
 
 <!--[if lt IE 9]><link rel="stylesheet" media="all" type="text/css" href="<?php get_template_directory_uri(); ?>/css/ie.css" /><![endif]-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=1024">
 
     
 <!-- JavaScript / jQuery -->

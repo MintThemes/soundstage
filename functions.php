@@ -438,6 +438,14 @@ function mt_soundstage_header_scripts(){
 	//thickbox
 	add_thickbox();
 	
+	//jplayer scripts
+	wp_register_script( 'mt_jplayer_min', get_template_directory_uri() . '/js/jplayer/jquery.jplayer.min.js' ); 
+	wp_enqueue_script( 'mt_jplayer_min', array('jquery') ); 
+	
+	wp_register_script( 'mt_jplayer_inspector', get_template_directory_uri() . '/js/jplayer/jquery.jplayer.inspector.js' ); 
+	wp_enqueue_script( 'mt_jplayer_inspector', array('jquery') ); 
+
+	
 }
 add_action('wp_enqueue_scripts', 'mt_soundstage_header_scripts');
 

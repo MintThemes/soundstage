@@ -7,19 +7,6 @@ function jplayer_init_method() {
  
 add_action('template_redirect', 'jplayer_init_method');
 
-
-function mt_soundstage_jplayer_scripts() {
-	
-wp_register_script( 'mt_jplayer_min', get_template_directory_uri() . '/js/jplayer/jquery.jplayer.min.js' ); 
-wp_enqueue_script( 'mt_jplayer_min' ); 
-
-wp_register_script( 'mt_jplayer_inspector', get_template_directory_uri() . '/js/jplayer/jquery.jplayer.inspector.js' ); 
-wp_enqueue_script( 'mt_jplayer_inspector' ); 
-
-}
-
-add_action('wp_enqueue_scripts', 'mt_soundstage_jplayer_scripts');
-
 function jplayer_script(){ 
 global $cap; 
 global $post_id;

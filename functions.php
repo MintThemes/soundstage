@@ -435,6 +435,8 @@ function mt_soundstage_header_scripts(){
 	//thickbox
 	add_thickbox();
 	
+	wp_enqueue_script("jquery");
+	
 }
 add_action('wp_enqueue_scripts', 'mt_soundstage_header_scripts');
 

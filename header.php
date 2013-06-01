@@ -20,10 +20,7 @@
 	 */
 	wp_title( '|', true, 'right' );
 
-	?></title>
-    
-    <?php wp_enqueue_script("jquery"); ?>
-    
+	?></title>    
     
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/flexslider.css" />

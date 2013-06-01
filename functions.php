@@ -419,6 +419,9 @@ function mt_soundstage_get_category_id($cat_name){
 
 //Header Scripts and Jquery
 function mt_soundstage_header_scripts(){ 
+
+	wp_enqueue_script("jquery");
+	
     // Register the scripts for the theme: 
 	wp_enqueue_script( 'mt_clear-form-feilds', get_template_directory_uri() . '/js/clear-form-feilds.js' ); 
 	wp_enqueue_script( 'mt_flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js' ); 
@@ -434,8 +437,6 @@ function mt_soundstage_header_scripts(){
 	
 	//thickbox
 	add_thickbox();
-	
-	wp_enqueue_script("jquery");
 	
 }
 add_action('wp_enqueue_scripts', 'mt_soundstage_header_scripts');

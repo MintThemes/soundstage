@@ -7,6 +7,10 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.3.1 - June 12, 2013
+Fix for child themes using options framework plugin.
+$themename = get_template();
+
 1.0.2.7 - May 14, 2013
 Added <meta name="viewport" content="width=1024"> to the header.php file
 

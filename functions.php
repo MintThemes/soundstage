@@ -420,6 +420,9 @@ function mt_soundstage_get_category_id($cat_name){
 //Header Scripts and Jquery
 function mt_soundstage_header_scripts(){ 
 
+	//flexslider style
+	wp_enqueue_style( 'mt_soundstage_flexslider_css', get_template_directory_uri() . '/css/flexslider.css' ); 
+
 	wp_enqueue_script("jquery");
 	
     // Register the scripts for the theme: 

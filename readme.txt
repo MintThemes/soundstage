@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.3.2 - July 3, 2013
+Moved flex slider css from header to enqueue function
+
 1.0.3.1 - June 12, 2013
 Fix for child themes using options framework plugin.
 $themename = get_template();

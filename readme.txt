@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.3.3 - August 8, 2013
+Removed drop down styling which conflicts with new WooCommerce
+
 1.0.3.2 - July 3, 2013
 Moved flex slider css from header to enqueue function
 

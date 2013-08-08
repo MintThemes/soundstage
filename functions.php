@@ -430,7 +430,7 @@ function mt_soundstage_header_scripts(){
 	wp_enqueue_script( 'mt_flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js' ); 
 	wp_enqueue_script( 'jquery-ui-core' );
 	wp_enqueue_script( 'jquery-ui-widget' );
-	wp_enqueue_script( 'mt_ui_select', get_template_directory_uri() . '/js/ui.js', array( 'jquery-ui-core', 'jquery-ui-widget' ) ); 
+	//wp_enqueue_script( 'mt_ui_select', get_template_directory_uri() . '/js/ui.js', array( 'jquery-ui-core', 'jquery-ui-widget' ) ); 
     wp_enqueue_script( 'mt_main', get_template_directory_uri() . '/js/jquery.main.js' ); 
 	wp_localize_script('mt_main', 'mt_script_vars', array(
 			'cap_slider_slideshow' => __(of_get_option("cap_slider_slideshow"), 'Soundstage'),

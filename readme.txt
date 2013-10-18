@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.3.4 - October 18, 2013
+Added Footer Navigation menu.
+
 1.0.3.3 - August 8, 2013
 Removed drop down styling which conflicts with new WooCommerce
 

@@ -204,6 +204,7 @@ if ( ! function_exists( 'mt_soundstage_setup' ) ):
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => __( 'Primary Navigation', 'mt_soundstage_translation' ),
+			'footer' => __( 'Footer Navigation', 'mt_soundstage_translation' ),
 		) );
 		
 	

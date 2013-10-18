@@ -30,7 +30,8 @@
                 
 					$options = array(
 					'echo' => false
-					,'container' => false
+					,'container' => false,
+					'theme_location' => 'footer'
 					);
 					
 					$menu = wp_nav_menu($options);

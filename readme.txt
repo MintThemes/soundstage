@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.3.5 - October 31, 2013
+Removed display:none from ".required" class
+
 1.0.3.4 - October 18, 2013
 Added Footer Navigation menu.
 

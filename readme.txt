@@ -7,6 +7,9 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+1.0.3.7 - November 4, 2013
+Removed duplicate styles from stylesheet.
+
 1.0.3.6 - November 1, 2013
 Added min height of 350 to homepage widgets items-block
 

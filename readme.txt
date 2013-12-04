@@ -7,6 +7,12 @@ Contact Info: Visit mintthemes.com
 ----------------------------------------------------------------------------------------------------------
 
 VERSION HISTORY
+
+1.0.3.8 - November 4, 2013
+Removed Cubano Font
+Added Google Font in its place
+Photo albums sort by menu order ascending
+
 1.0.3.7 - November 4, 2013
 Removed duplicate styles from stylesheet.
 

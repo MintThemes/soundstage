@@ -21,7 +21,9 @@ get_header(); ?>
 						'post_type' => 'attachment',
 						'numberposts' => -1,
 						'post_status' => null,
-						'post_parent' => $post->ID
+						'post_parent' => $post->ID,
+						'order' => 'ASC',
+						'orderby' => 'menu_order'
 						); 
 					$attachments = get_posts($args);
 					$currentAttachmentNum = 0;

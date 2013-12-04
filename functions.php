@@ -448,6 +448,8 @@ function mt_soundstage_header_scripts(){
 	
 	wp_register_script( 'mt_jplayer_inspector', get_template_directory_uri() . '/js/jplayer/jquery.jplayer.inspector.js' ); 
 	wp_enqueue_script( 'mt_jplayer_inspector', array('jquery') ); 
+	
+	echo "<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>";
 
 	
 }

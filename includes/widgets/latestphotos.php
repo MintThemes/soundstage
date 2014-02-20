@@ -178,8 +178,9 @@ class mt_soundstage_Latest_photos extends WP_Widget {
 		
 
 
-
-		$cache[$args['widget_id']] = ob_get_flush();
+		if (!empty($args['widget_id'])){
+			$cache[$args['widget_id']] = ob_get_flush();
+		}
 
 		wp_cache_set( 'mt_soundstage_latest_photos', $cache, 'widget' );
 

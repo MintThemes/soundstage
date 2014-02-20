@@ -1019,6 +1019,131 @@ $options[] = array( "name" => __("Member 12's Custom URL (optional)", 'mt_sounds
                     "id" => "cap_member12_custom",
                     "std" => "",
                     "type" => "text");
+					
+$options[] = array( "name" => __("---------------------------------------- Member 13's Name ----------------------------------------", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the name of Member 13", 'mt_soundstage_translation'),
+                    "id" => "cap_member13_name",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 13's Picture", 'mt_soundstage_translation'),
+                    "desc" => __("Upload the picture of Member 13. Recommended size: 118px X 113px", 'mt_soundstage_translation'),
+                    "id" => "cap_member13_picture",
+                    "std" => "",
+                    "type" => "upload");
+
+$options[] = array( "name" => __("Member 13's Role (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Describe the role in the band of Member 13.", 'mt_soundstage_translation'),
+                    "id" => "cap_member13_role",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 13's Twitter (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the Twitter URL of Member 13.", 'mt_soundstage_translation'),
+                    "id" => "cap_member13_twitter",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 13's Facebook (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the Facebook URL of Member 13.", 'mt_soundstage_translation'),
+                    "id" => "cap_member13_facebook",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 13's YouTube (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the YouTube URL of Member 13.", 'mt_soundstage_translation'),
+                    "id" => "cap_member13_youtube",
+                    "std" => "",
+                    "type" => "text");
+					
+$options[] = array( "name" => __("Member 13's Custom URL (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter a custom URL of Member 13. This is used when a user clicks on the band member's image.", 'mt_soundstage_translation'),
+                    "id" => "cap_member13_custom",
+                    "std" => "",
+                    "type" => "text");
+$options[] = array( "name" => __("---------------------------------------- Member 14's Name ----------------------------------------", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the name of Member 14", 'mt_soundstage_translation'),
+                    "id" => "cap_member14_name",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 14's Picture", 'mt_soundstage_translation'),
+                    "desc" => __("Upload the picture of Member 14. Recommended size: 118px X 113px", 'mt_soundstage_translation'),
+                    "id" => "cap_member14_picture",
+                    "std" => "",
+                    "type" => "upload");
+
+$options[] = array( "name" => __("Member 14's Role (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Describe the role in the band of Member 14.", 'mt_soundstage_translation'),
+                    "id" => "cap_member14_role",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 14's Twitter (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the Twitter URL of Member 14.", 'mt_soundstage_translation'),
+                    "id" => "cap_member14_twitter",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 14's Facebook (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the Facebook URL of Member 14.", 'mt_soundstage_translation'),
+                    "id" => "cap_member14_facebook",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 14's YouTube (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the YouTube URL of Member 14.", 'mt_soundstage_translation'),
+                    "id" => "cap_member14_youtube",
+                    "std" => "",
+                    "type" => "text");
+					
+$options[] = array( "name" => __("Member 14's Custom URL (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter a custom URL of Member 14. This is used when a user clicks on the band member's image.", 'mt_soundstage_translation'),
+                    "id" => "cap_member14_custom",
+                    "std" => "",
+                    "type" => "text");
+$options[] = array( "name" => __("---------------------------------------- Member 15's Name ----------------------------------------", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the name of Member 15", 'mt_soundstage_translation'),
+                    "id" => "cap_member15_name",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 15's Picture", 'mt_soundstage_translation'),
+                    "desc" => __("Upload the picture of Member 15. Recommended size: 118px X 113px", 'mt_soundstage_translation'),
+                    "id" => "cap_member15_picture",
+                    "std" => "",
+                    "type" => "upload");
+
+$options[] = array( "name" => __("Member 15's Role (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Describe the role in the band of Member 15.", 'mt_soundstage_translation'),
+                    "id" => "cap_member15_role",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 15's Twitter (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the Twitter URL of Member 15.", 'mt_soundstage_translation'),
+                    "id" => "cap_member15_twitter",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 15's Facebook (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the Facebook URL of Member 15.", 'mt_soundstage_translation'),
+                    "id" => "cap_member15_facebook",
+                    "std" => "",
+                    "type" => "text");
+
+$options[] = array( "name" => __("Member 15's YouTube (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter the YouTube URL of Member 15.", 'mt_soundstage_translation'),
+                    "id" => "cap_member15_youtube",
+                    "std" => "",
+                    "type" => "text");
+					
+$options[] = array( "name" => __("Member 15's Custom URL (optional)", 'mt_soundstage_translation'),
+                    "desc" => __("Enter a custom URL of Member 15. This is used when a user clicks on the band member's image.", 'mt_soundstage_translation'),
+                    "id" => "cap_member15_custom",
+                    "std" => "",
+                    "type" => "text");
+
 
 $options[] = array( "name" => __("", 'mt_soundstage_translation'),
                     "desc" => __("", 'mt_soundstage_translation'), 

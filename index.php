@@ -195,7 +195,7 @@ for ( $i = 1; $i <= 6; $i++ ) {
 		<?php 
 		//array of band members
 		$bandmembers = array();
-		for ( $i = 1; $i <= 12; $i++ ) {
+		for ( $i = 1; $i <= 15; $i++ ) {
 			$bandmembers[] = array(
 				'title'    => of_get_option( sprintf( 'cap_slider_title%d', $i ) ),
 				'name' => of_get_option( sprintf('cap_member%d_name', $i ) ),

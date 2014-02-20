@@ -127,14 +127,14 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 				
                 <?php 
 					$current_time = current_time('mysql');
-					list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = split( '([^0-9])', $current_time );
-					$current_timestamp = $today_year . $today_month . $today_day . $hour . $minute;
+					$current_timestamp = date('YmdHi');
+		
 					$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 					$args = array( 
 					'meta_query' => array(
 						array(
 							'key' => '_start_eventtimestamp',
-							'value' => $current_timestamp,
+							'value' => $current_time ,
 							'compare' => '>'
 						)
 					),
@@ -187,8 +187,9 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 		
 
 
-
-		$cache[$args['widget_id']] = ob_get_flush();
+		if ( !empty($args['widget_id'] ) ) {
+			$cache[$args['widget_id']] = ob_get_flush();
+		}
 
 		wp_cache_set( 'mt_soundstage_upcoming_shows', $cache, 'widget' );
 

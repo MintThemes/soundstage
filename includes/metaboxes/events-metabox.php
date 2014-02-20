@@ -105,11 +105,11 @@ function mt_soundstage_ep_eventposts_save_meta( $post_id, $post ) {
     // We'll put it into an array to make it easier to loop though
     $metabox_ids = array( '_start', '_end' );
     foreach ($metabox_ids as $key ) {
-        $aa = $_POST[$key . '_year'];
-        $mm = $_POST[$key . '_month'];
-        $jj = $_POST[$key . '_day'];
-        $hh = $_POST[$key . '_hour'];
-        $mn = $_POST[$key . '_minute'];
+        $aa = isset( $_POST[$key . '_year'] ) ? $_POST[$key . '_year'] : NULL;
+        $mm = isset( $_POST[$key . '_month'] ) ? $_POST[$key . '_month'] : NULL;
+        $jj = isset( $_POST[$key . '_day'] ) ? $_POST[$key . '_day'] : NULL;
+        $hh = isset( $_POST[$key . '_hour'] ) ? $_POST[$key . '_hour'] : NULL;
+        $mn = isset( $_POST[$key . '_minute'] ) ? $_POST[$key . '_minute'] : NULL;
         $aa = ($aa <= 0 ) ? date('Y') : $aa;
         $mm = ($mm <= 0 ) ? date('n') : $mm;
         $jj = sprintf('%02d',$jj);

@@ -39,19 +39,21 @@ function mt_soundstage_posttype_meta_super_options() {
 
 function mt_soundstage_posttype_save_item_number(){  
 	global $post;
-	
+		
 	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
-		return $post->ID;
+		return isset($post->ID) ? $post->ID : NULL;
 	
 	if ( ! isset( $_POST[ "soundstage_post_type" ] ) )
-		return $post->ID;
+		return isset($post->ID) ? $post->ID : NULL;
 
 	$type  = esc_attr( $_POST["soundstage_post_type"] );
 	$types = mt_soundstage_get_post_types();
 
 	if ( ! array_key_exists( $type, $types ) )
-		return $post->ID;
+		return isset($post->ID) ? $post->ID : NULL;
 
-	update_post_meta( $post->ID, 'soundstage_post_type', $type );
+	if (isset($post->ID) ){
+		update_post_meta( $post->ID, 'soundstage_post_type', $type );
+	}
 }
 add_action( 'save_post', 'mt_soundstage_posttype_save_item_number' );

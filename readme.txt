@@ -8,6 +8,16 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.0 - February 20, 2014
+The following errors have all been fixed:
+*Notice: Undefined index: /soundstage/includes/widgets/upcomingshows.php on line 191 
+*Deprecated: Function split() is deprecated in /soundstage/includes/widgets/upcomingshows.php on line 130 
+*Notice: Undefined index: widget_id in /soundstage/includes/widgets/latestvideo.php on line 171 
+*Notice: Undefined index: widget_id in /soundstage/includes/widgets/latestphotos.php on line 182
+
+1.0.3.9 - January 27, 2014
+Added ability for extra band members - now 15 total.
+
 1.0.3.8 - November 4, 2013
 Removed Cubano Font
 Added Google Font in its place

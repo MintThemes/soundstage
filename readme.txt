@@ -8,6 +8,9 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.1 - February 28, 2014
+* WooCommerce Style updates
+
 1.0.4.0 - February 20, 2014
 The following errors have all been fixed:
 *Notice: Undefined index: /soundstage/includes/widgets/upcomingshows.php on line 191 

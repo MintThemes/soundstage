@@ -8,6 +8,9 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.2 - April 17, 2014
+* WooCommerce Style updates for archive pages
+
 1.0.4.1 - February 28, 2014
 * WooCommerce Style updates
 

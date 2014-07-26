@@ -8,6 +8,9 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.3 - July 26, 2014
+* Changed the date format for event to 12 hour time clock.
+
 1.0.4.2 - April 17, 2014
 * WooCommerce Style updates for archive pages
 

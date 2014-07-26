@@ -260,8 +260,11 @@ function mt_soundstage_eventposttype_get_the_event_time_only() {
 	$minute = $minute[0];
 	
     $eventdate = mt_soundstage_eventposttype_get_the_month_abbr($month);
-   
-    $eventdate .= $hour;
-    $eventdate .= ':' . $minute;
-    echo $eventdate;
+	
+	$time_string = strtotime( $hour . ':' . $minute );
+    echo date( 'g:ia', $time_string );
+	
+    //$eventdate .= $hour;
+    //$eventdate .= ':' . $minute;
+    //echo $eventdate;
 }

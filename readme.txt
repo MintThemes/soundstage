@@ -8,6 +8,9 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.4 - August 7, 2014
+* Fixed shows widget which wasn’t always showing the right shows because the timestamp ofr the current time (cut off) wasn’t the same format. Now both are timestamps.
+
 1.0.4.3 - July 26, 2014
 * Changed the date format for event to 12 hour time clock.
 

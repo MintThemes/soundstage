@@ -127,14 +127,15 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 				
                 <?php 
 					$current_time = current_time('mysql');
-					$current_timestamp = date('YmdHi');
+					list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = split( '([^0-9])', $current_time );
+					$current_timestamp = $today_year . $today_month . $today_day . $hour . $minute;
 		
 					$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 					$args = array( 
 					'meta_query' => array(
 						array(
 							'key' => '_start_eventtimestamp',
-							'value' => $current_time ,
+							'value' => $current_timestamp ,
 							'compare' => '>'
 						)
 					),

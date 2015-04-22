@@ -25,7 +25,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
 <!--[if lt IE 9]><link rel="stylesheet" media="all" type="text/css" href="<?php get_template_directory_uri(); ?>/css/ie.css" /><![endif]-->
-<meta name="viewport" content="width=1024">
+<meta name=viewport content="width=device-width, initial-scale=1">
 
     
 <!-- JavaScript / jQuery -->

@@ -2,7 +2,7 @@
 Theme Name: Soundstage
 Theme URI: http://mintthemes.com
 Description: A theme for Bands
-Version: 1.0.4.5
+Version: 1.0.4.6
 Author: Mint Themes
 Author URI: http://mintthemes.com
 License: GNU General Public License
@@ -72,7 +72,7 @@ body{
 	color:#3c3e3f;
 	font:13px/19px DroidSerifRegular, Arial, Helvetica, Sans-Serif;
 	background: #fff url(css/images/bg-body.jpg);
-	min-width:1000px;
+	width:100%;
 	height:100%;
 }
 img{border-style:none;}
@@ -173,15 +173,16 @@ q:after{content:"";}
 	height:452;	
 }
 /* header */
-.home #header{
+#header{
 	background:none;
+	width:100%;
 	height:105px;
 	margin:0;
-}
-#header{
-	position:relative;
+	display:table;
+	max-width: 1000px;
+ 	margin: 0 auto;
+	
 	height:106px;
-	margin:0 0 21px;
 	z-index:10;
 	background:url(css/images/bg-header02.png) repeat-x 0 100%;
 }
@@ -199,7 +200,8 @@ q:after{content:"";}
 	z-index:1;
 }
 .logo{
-	position:absolute;
+	display:table-cell;
+	vertical-align:middle;
 	margin:0 0 0 -491px;
 	left:50%;
 	top:30px;
@@ -209,9 +211,10 @@ q:after{content:"";}
 	list-style:none;
 	margin:0 -490px 0 0;
 	padding:0;
-	position:absolute;
-	right:50%;
+	display:table-cell;
+	vertical-align:top;
 	font:18px/22px Bree Serif, Arial, Helvetica, Sans-Serif;
+	text-align:right;
 }
 #nav > li.active,
 #nav > li:hover{
@@ -220,7 +223,7 @@ q:after{content:"";}
 	margin-bottom:-15px;
 }
 #nav > li{
-	float:left;
+	display:inline-block;
 	margin:0 0 0 36px;
 	padding:41px 0 0;
 	position:relative;
@@ -243,6 +246,8 @@ q:after{content:"";}
 }
 #nav > li:hover > ul{left:1px !important;}
 #nav > li > ul{
+	z-index: 99999999;
+  	text-align: left;	
 	left:-9999px;
 	top:78px;
 }
@@ -339,7 +344,8 @@ q:after{content:"";}
 	clear:both;
 }
 .items-holder{
-	width:1008px;
+	width:100%;
+	max-width:1008px;
 	margin:0 auto 60px;
 }
 .items-holder .item-block, .footer-block{
@@ -641,7 +647,8 @@ q:after{content:"";}
 	background:url(css/images/bg-news-holder-bottom.png) repeat-x;
 }
 .news-holder > .holder{
-	width:978px;
+	max-width:978px;
+	width:100%;
 	margin:0 auto;
 }
 .news-holder h2{
@@ -660,13 +667,15 @@ q:after{content:"";}
 	list-style:none;
 	margin:-2px -32px 0 -26px;
 	padding:0;
-	width:1040px;
+	max-width:1040px;
+	width:100%;
 }
 .news li{
 	display:inline-block;
 	vertical-align:top;
 	background:url(css/images/bg-news.png) no-repeat 100% 0;
-	width:490px;
+	max-width:460px;
+	width:100%;
 	overflow:hidden;
 	padding:29px 0 30px 30px;
 	margin-left:-4px;
@@ -758,7 +767,8 @@ q:after{content:"";}
 	clear:both;
 }
 #main{
-	width:978px;
+	max-width:1008px;
+	width:100%;
 	margin:0 auto 33px;
 }
 #main h2{
@@ -839,7 +849,8 @@ q:after{content:"";}
 	margin:0 0 0 -24px !important;
 	padding:0;
 	font:18px/20px WebfontBold, Arial, Helvetica, Sans-Serif;
-	width:1008px;
+	max-width:1008px;
+	width:100%;
 }
 .related a, .catalog a{
 	text-decoration:none;
@@ -901,12 +912,14 @@ q:after{content:"";}
 }
 .preview-block .related{
 	float:right;
-	width:504px;
+	max-width:504px;
+	width:100%;
 }
 .preview-block .related li{padding-bottom:37px;}
 .preview-block .text{
 	float:right;
-	width:489px;
+	max-width:489px;
+	width:100%;
 }
 .preview-block .text p{margin:0 0 15px;}
 #main .preview-block h2{
@@ -1024,7 +1037,8 @@ body .product-quantity .quantity.buttons_added .qty,
 .soc .alt02{background-position:-116px 0;}
 .soc .alt03{background-position:-174px 0;}
 .social-container{
-	width:450px;
+	max-width:450px;
+	width:100%;
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;
@@ -1039,7 +1053,8 @@ body .product-quantity .quantity.buttons_added .qty,
 }
 .social-block form, .email-signup{
 	float:right;
-	width:430px;
+	max-width:430px;
+	width:100%;
 	background:url(css/images/separator04.gif) repeat-y;
 	margin:-42px 0 -30px;
 	margin-left: auto;
@@ -1048,7 +1063,8 @@ body .product-quantity .quantity.buttons_added .qty,
 	line-height:47px;
 }
 .email-signup-full{
-	width:430px;
+	max-width:430px;
+	width:100%;
 	margin:-42px 0 -30px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1159,7 +1175,8 @@ input[type=submit]:hover,
 	list-style:none;
 	margin:-31px 0 0 -30px;
 	padding:0;
-	width:1008px;
+	max-width:1008px;
+	width:100%;
 	text-shadow:#fff 0 1px 0;
 	font:12px/16px WebfontBold, Arial, Helvetica, Sans-Serif;
 	color:#a6a298;
@@ -1167,7 +1184,8 @@ input[type=submit]:hover,
 }
 .team-list > li{
 	float:left;
-	width:304px;
+	max-width:304px;
+	width:100%;
 	height:122px;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
@@ -1247,7 +1265,8 @@ input[type=submit]:hover,
 .team-list ul .alt03{background-position:-54px 0;}
 #sidebar{
 	float:right;
-	width:306px;
+	max-width:306px;
+	width:100%;
 }
 #sidebar .item-block{padding:0 0 26px;}
 #sidebar .item-block h2{
@@ -1291,8 +1310,7 @@ input[type=submit]:hover,
 	display:none;
 }
 #content{
-	float:left;
-	width:651px;
+	width:100%;
 }
 .text-holder{
 	overflow:hidden;
@@ -1414,7 +1432,8 @@ input[type="password"]{
 .comments-list li{
 	display:table;
 	vertical-align:middle;
-	width:641px;
+	max-width:641px;
+	width:100%;
 	margin:0 0 27px;
 }
 .comments-list .visual{
@@ -1499,7 +1518,6 @@ input[type="password"]:focus{
 	background:url(css/images/bg-title-block.png) repeat-x;
 	height:134px;
 	position:relative;
-	margin:-22px 0 0;
 }
 .title-block h1{
 	position:absolute;
@@ -1640,7 +1658,8 @@ body .button:hover,
 	padding:83px 0 0;
 }
 #footer{
-	width:978px;
+	max-width:978px;
+	width:100%;
 	margin:0 auto;
 	padding-bottom:20px;
 }
@@ -1711,12 +1730,13 @@ body .button:hover,
 	margin:0 -26px 0 0;
 	padding:7px 0 0;
 	font:13px/38px DroidSerifRegular, Arial, Helvetica, Sans-Serif;
-	width:336px;
+	max-width:336px;
+	width:100%;
 	overflow:hidden;
 }
 .footer-social li{
 	float:left;
-	width:142px;
+	width:122px;
 	padding:0 26px 32px 0;
 }
 .footer-social a{
@@ -1901,7 +1921,8 @@ div.product form.cart,
 
 .container {
 	margin: 0 auto;
-	width: 978px;
+	max-width: 978px;
+	width:100%;
 }
 
 .title-block .add-to-cart {

@@ -8,6 +8,9 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.6 - April 22, 2015
+* First responsive release.
+
 1.0.4.5 - October 5, 2014
 * Fixed “Minus” button on product pages
 

@@ -8,6 +8,9 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.7 - April 24, 2015
+* XSS Security Fix for add_query_arg
+
 1.0.4.6 - April 22, 2015
 * First responsive release.
 

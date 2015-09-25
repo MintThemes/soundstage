@@ -207,7 +207,7 @@ q:after{content:"";}
 	top:30px;
 }
 .logo img{display:block;}
-#nav{
+#menu-main-navigation{
 	list-style:none;
 	margin:0 -490px 0 0;
 	padding:0;
@@ -216,23 +216,23 @@ q:after{content:"";}
 	font:18px/22px Bree Serif, Arial, Helvetica, Sans-Serif;
 	text-align:right;
 }
-#nav > li.active,
-#nav > li:hover{
+#menu-main-navigation > li.active,
+#menu-main-navigation > li:hover{
 	background:url(css/images/nav-active.gif) repeat-x;
 	padding-bottom:15px;
 	margin-bottom:-15px;
 }
-#nav > li{
+#menu-main-navigation > li{
 	display:inline-block;
 	margin:0 0 0 36px;
 	padding:41px 0 0;
 	position:relative;
 }
-#nav a{
+#menu-main-navigation a{
 	color:#141618;
 	text-decoration:none;
 }
-#nav > li ul{
+#menu-main-navigation > li ul{
 	position:absolute;
 	background-color:#fff;
 	list-style:none;
@@ -244,32 +244,32 @@ q:after{content:"";}
 	-moz-box-shadow:0px 1px 10px rgba(0, 0, 0, 0.49);
 	box-shadow:0px 1px 10px rgba(0, 0, 0, 0.49);
 }
-#nav > li:hover > ul{left:1px !important;}
-#nav > li > ul{
+#menu-main-navigation > li:hover > ul{left:1px !important;}
+#menu-main-navigation > li > ul{
 	z-index: 99999999;
   	text-align: left;	
 	left:-9999px;
 	top:78px;
 }
-#nav > li > ul li:hover > ul,
-#nav > li > ul li.active > ul{left:100%;}
-#nav > li > ul ul{
+#menu-main-navigation > li > ul li:hover > ul,
+#menu-main-navigation > li > ul li.active > ul{left:100%;}
+#menu-main-navigation > li > ul ul{
 	left:-9999px;
 	top:5px;
 }
-#nav > li > ul li:hover,
-#nav > li > ul li.active{
+#menu-main-navigation > li > ul li:hover,
+#menu-main-navigation > li > ul li.active{
 	padding:0 16px 27px 0;
 	margin:27px -16px -27px 0;
 }
-#nav > li > ul a{display:block;}
-#nav > li > ul li:first-child{margin-top:0;}
-#nav > li > ul li{
+#menu-main-navigation > li > ul a{display:block;}
+#menu-main-navigation > li > ul li:first-child{margin-top:0;}
+#menu-main-navigation > li > ul li{
 	margin:27px 0 0;
 	position:relative;
 }
-#nav > li > ul li.active > a,
-#nav > li > ul li:hover > a{color:#dd5c1a !important;}
+#menu-main-navigation > li > ul li.active > a,
+#menu-main-navigation > li > ul li:hover > a{color:#dd5c1a !important;}
 /* flexslider */
 #main .flexslider{
 	width:976px;
@@ -2003,4 +2003,20 @@ div.product form.cart,
 .post-type-archive-product #content,
 .tax-product_cat #content{
 	width:100%;	
+}
+
+/* MP Menu Styling */
+#mp-menu-toggle-button-holder{
+    vertical-align: middle;
+    display: table-cell!important;
+}
+.menu-toggle{
+	display:none;	
+}
+
+/* Hide Slide text on mobiles */
+@media (max-width: 600px){
+	.slides span{
+		display:none!important;	
+	}
 }

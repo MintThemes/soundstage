@@ -50,7 +50,7 @@
 
 <body <?php body_class(); ?>> 
 
-<div id="wrapper"><!-- wrapper -->
+<div id="wrapper" class="hfeed site"><!-- wrapper -->
 		<div id="header"><!-- header -->
 			<span class="decor">&nbsp;</span>
 			<h1 class="logo">
@@ -66,18 +66,16 @@
                             ?>
                             </a>
 			</h1>
+            	<nav id="site-navigation" class="navigation-main" role="navigation">
+                        
+                    <div class="nav-inner">
+                        <h1 class="menu-toggle"><?php _e( 'Menu', 'mp_knapstack' ); ?></h1>
+                        <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'mp_knapstack' ); ?>"><?php _e( 'Skip to content', 'mp_knapstack' ); ?></a></div>
             
-			<ul id="nav">
-				<?php
-                
-                $options = array(
-                'echo' => false
-                ,'container' => false
-                );
-                
-                $menu = wp_nav_menu($options);
-                echo preg_replace( array( '#^<ul[^>]*>#', '#</ul>$#' ), '', $menu );
-                
-                ?>
-			</ul>
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'mp_core_link_to_menu_editor', 'container_class' => 'menu-main-navigation-container', ) ); ?>
+                        
+                        <?php  echo function_exists( 'mp_links' ) ? mp_links( get_theme_mod('mp_knapstack_header_link_group') ) : NULL; ?>
+                    </div><!-- .nav-inner -->
+                    
+                </nav><!-- #site-navigation -->
 		</div><!-- end header -->

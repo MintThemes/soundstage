@@ -8,6 +8,9 @@ Contact Info: Visit mintthemes.com
 
 VERSION HISTORY
 
+1.0.4.8 -September 25, 2015
+Head Navigation now works with MP Menu plugin
+
 1.0.4.7 - April 24, 2015
 * XSS Security Fix for add_query_arg
 

@@ -18,45 +18,16 @@
 
 class mt_soundstage_Latest_video extends WP_Widget {
 
-
-
 	/**
-
-	 * Constructor
-
-	 *
-
-	 * @return void
-
-	 **/
-
-	function mt_soundstage_Latest_video () {
-
-		$widget_ops = array( 
-
-			'classname' => 'mt_soundstage_latest_video', 
-
-			'description' => __( 'Display latest video', 'mt_soundstage_translation' ) 
-
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		$widget_ops = array(
+			'classname' => 'mt_soundstage_latest_video',
+			'description' =>  __( 'Display links to social networks', 'mt_soundstage_translation' ),
 		);
-
-		
-
-		$this->WP_Widget( 'mt_soundstage_latest_video', __( 'Latest Video', 'mt_soundstage_translation' ), $widget_ops );
-
-		$this->alt_option_name = 'mt_soundstage_latest_video';
-
-
-
-		add_action( 'save_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'deleted_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'switch_theme', array(&$this, 'flush_widget_cache' ) );
-
+		parent::__construct( 'mt_soundstage_latest_video',  __( 'Display latest video', 'mt_soundstage_translation' ), $widget_ops );
 	}
-
-
 
 	/**
 
@@ -107,7 +78,7 @@ class mt_soundstage_Latest_video extends WP_Widget {
 
 
 			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Latest Video', 'mt_soundstage_translation' ) : $instance['title'], $instance, $this->id_base);
-			
+
 
 
 			echo $before_widget;
@@ -124,7 +95,7 @@ class mt_soundstage_Latest_video extends WP_Widget {
 
 			  <div class="block">
 				 <?php
-					$args = array( 
+					$args = array(
 						'cat' => of_get_option('cap_videos_category'),
 						'showposts' => 1,
 					);
@@ -132,39 +103,39 @@ class mt_soundstage_Latest_video extends WP_Widget {
 					if($videos->have_posts() ) :
 						while( $videos->have_posts() ) : $videos->the_post()
 						?>
-						
-				
+
+
                         <div class="video">
-                        
+
                         		<?php
                                 $thumb = get_post_thumbnail_id();
                                 $img_url = wp_get_attachment_url( $thumb,'full'); //get img URL
                                 ?>
                                 <?php if ($img_url != ""){?><img src="<?php echo aq_resize( $img_url, 306, 215, true );  ?>" width="306" height="215" alt="<?php the_title(); ?>" /><?php } ?>
 								<a href="<?php the_permalink(); ?>" class="mask">&nbsp;</a>
-                                
+
                         </div>
                         <div class="video-title">
                             <span><?php echo substr(get_the_excerpt(), 0,30); ?>...</span>
                             <strong><?php the_title(); ?></strong>
                         </div>
-				
-					
-                    	
-					<?php 
+
+
+
+					<?php
 					endwhile;
 					wp_reset_postdata();
 					endif;
 					?>
               </div>
-			
+
 			<?php //END WIDGET OUTPUT
 
 			echo $after_widget;
 
-			
 
-		
+
+
 
 
 		if ( !empty($args['widget_id'])){
@@ -190,7 +161,7 @@ class mt_soundstage_Latest_video extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		
+
 
 		$this->flush_widget_cache();
 
@@ -227,8 +198,8 @@ class mt_soundstage_Latest_video extends WP_Widget {
 	function form( $instance ) {
 
 		$title = isset( $instance['title']) ? esc_attr( $instance['title'] ) : '';
-		
-		
+
+
 
 ?>
 
@@ -245,8 +216,3 @@ class mt_soundstage_Latest_video extends WP_Widget {
 }
 
 //register widget in functions.php - function name: mt_soundstage_widgets_init
-
-
-
-
-

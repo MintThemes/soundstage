@@ -1,62 +1,16 @@
 <?php
-
-/**
-
- * Makes a custom Widget for displaying recent projects/portfolio
-
- *
-
- * Learn more: http://codex.wordpress.org/Widgets_API#Developing_Widgets
-
- *
-
- * @package Intro
-
- * @since Intro 1.0
-
- */
-
 class mt_soundstage_Upcoming_shows extends WP_Widget {
 
-
-
 	/**
-
-	 * Constructor
-
-	 *
-
-	 * @return void
-
-	 **/
-
-	function mt_soundstage_Upcoming_shows () {
-
-		$widget_ops = array( 
-
-			'classname' => 'mt_soundstage_upcoming_shows', 
-
-			'description' => __( 'Display upcoming shows', 'mt_soundstage_translation' ) 
-
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		$widget_ops = array(
+			'classname' => 'mt_soundstage_upcoming_shows',
+			'description' =>  __( 'Display upcoming shows', 'mt_soundstage_translation' ),
 		);
-
-		
-
-		$this->WP_Widget( 'mt_soundstage_upcoming_shows', __( 'Upcoming Shows', 'mt_soundstage_translation' ), $widget_ops );
-
-		$this->alt_option_name = 'mt_soundstage_upcoming_shows';
-
-
-
-		add_action( 'save_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'deleted_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'switch_theme', array(&$this, 'flush_widget_cache' ) );
-
+		parent::__construct( 'mt_soundstage_upcoming_shows',  __( 'Display upcoming shows', 'mt_soundstage_translation' ), $widget_ops );
 	}
-
-
 
 	/**
 
@@ -107,7 +61,7 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 
 
 			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Upcoming Shows', 'mt_soundstage_translation' ) : $instance['title'], $instance, $this->id_base);
-			
+
 
 
 			echo $before_widget;
@@ -124,14 +78,14 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 
 			  <div class="block">
 		<ul class="item-list">
-				
-                <?php 
+
+                <?php
 					$current_time = current_time('mysql');
-					list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = split( '([^0-9])', $current_time );
+					list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = preg_split( '([^0-9])', $current_time );
 					$current_timestamp = $today_year . $today_month . $today_day . $hour . $minute;
-		
+
 					$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-					$args = array( 
+					$args = array(
 					'meta_query' => array(
 						array(
 							'key' => '_start_eventtimestamp',
@@ -149,43 +103,43 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 					if($events->have_posts() ) :
 						while( $events->have_posts() ) : $events->the_post() ?>
 
-						
+
                         <li>
 							<strong><?php echo mt_soundstage_eventposttype_get_the_event_date_without_year(); ?></strong>
 							<span><?php the_title(); ?></span>
 							<a href="<?php the_permalink(); ?>" class="btn">&nbsp;</a>
-						</li>	
-					
-                    	
-					<?php 
+						</li>
+
+
+					<?php
 					endwhile;
 					wp_reset_postdata();
 					else:
 					?>
-					
+
                      <li>
-							
+
 							<span><?php _e('No Shows Listed.', 'mt_soundstage_translation'); ?></span>
-							
-						</li>	
-                    
+
+						</li>
+
 					<?php endif; ?>
-					
-                    
-                </ul>        
+
+
+                </ul>
        				<div class="item-box">
-						<?php $category_id = of_get_option('cap_events_cat'); ?>                            
+						<?php $category_id = of_get_option('cap_events_cat'); ?>
                         <a class="more" href="<?php echo get_category_link(of_get_option('cap_events_cat')); ?>"><?php _e('View All Dates', 'mt_soundstage_translation'); ?></a>
 					</div>
                 </div>
-			
+
 			<?php //END WIDGET OUTPUT
 
 			echo $after_widget;
 
-			
 
-		
+
+
 
 
 		if ( !empty($args['widget_id'] ) ) {
@@ -211,7 +165,7 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		
+
 
 		$this->flush_widget_cache();
 
@@ -248,8 +202,8 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 	function form( $instance ) {
 
 		$title = isset( $instance['title']) ? esc_attr( $instance['title'] ) : '';
-		
-		
+
+
 
 ?>
 
@@ -262,12 +216,4 @@ class mt_soundstage_Upcoming_shows extends WP_Widget {
 		<?php
 
 	}
-
 }
-
-//register widget in functions.php - function name: mt_soundstage_widgets_init
-
-
-
-
-

@@ -9,24 +9,16 @@
  */
 
 class mt_soundstage_Music_player extends WP_Widget {
-	
+
 	/**
-	 * Constructor
-	 *
-	 * @return void
-	 **/
-	function mt_soundstage_Music_player () {
-		$widget_ops = array( 
-			'classname' => 'mt_soundstage_music_player', 
-			'description' => __( 'Only use once per page. Play tracks from the latest discography post.', 'mt_soundstage_translation' ) 
-		);	
-
-		$this->WP_Widget( 'mt_soundstage_music_player', __( 'Music Player', 'mt_soundstage_translation' ), $widget_ops );
-		$this->alt_option_name = 'mt_soundstage_music_player';
-
-		add_action( 'save_post', array(&$this, 'flush_widget_cache' ) );
-		add_action( 'deleted_post', array(&$this, 'flush_widget_cache' ) );
-		add_action( 'switch_theme', array(&$this, 'flush_widget_cache' ) );
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		$widget_ops = array(
+			'classname' => 'mt_soundstage_music_player',
+			'description' =>  __( 'Only use once per page. Play tracks from the latest discography post.', 'mt_soundstage_translation' ),
+		);
+		parent::__construct( 'mt_soundstage_music_player',  __( 'Only use once per page. Play tracks from the latest discography post.', 'mt_soundstage_translation' ), $widget_ops );
 	}
 
 	/**
@@ -55,16 +47,16 @@ class mt_soundstage_Music_player extends WP_Widget {
 		extract( $args, EXTR_SKIP );
 
 			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Music', 'mt_soundstage_translation' ) : $instance['title'], $instance, $this->id_base);
-			
+
 			echo $before_widget;
 			echo $before_title;
 			echo $title; // Can set this with a widget option, or omit altogether
 			echo $after_title;
 ?>
 				<div class="block">
-				
+
        				<?php jplayer_code( array( 'show_thumb' => $instance[ 'thumb' ] ) ); ?>
-                    
+
 				</div>
 <?php
 			echo $after_widget;
@@ -83,7 +75,7 @@ class mt_soundstage_Music_player extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance[ 'title' ] = strip_tags( $new_instance[ 'title' ] );
-		$instance[ 'thumb' ] = isset( $new_instance[ 'thumb' ] );		
+		$instance[ 'thumb' ] = isset( $new_instance[ 'thumb' ] );
 
 		$this->flush_widget_cache();
 
@@ -118,7 +110,7 @@ class mt_soundstage_Music_player extends WP_Widget {
 					<?php _e( 'Show album artwork', 'mt_soundstage_translation' ); ?>
 				</label>
 			</p>
-            
+
             <p>
             	<label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php _e( 'Upload songs in the "Add New Post" section, refer to theme docs for more info.', 'mt_soundstage_translation' ); ?></label>
             </p>

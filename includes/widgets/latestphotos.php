@@ -30,30 +30,15 @@ class mt_soundstage_Latest_photos extends WP_Widget {
 
 	 **/
 
-	function mt_soundstage_Latest_photos () {
-
-		$widget_ops = array( 
-
-			'classname' => 'mt_soundstage_latest_photos', 
-
-			'description' => __( 'Display latest photos', 'mt_soundstage_translation' ) 
-
+	/**
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		$widget_ops = array(
+			'classname' => 'mt_soundstage_latest_photos',
+			'description' => __( 'Display latest photos', 'mt_soundstage_translation' ),
 		);
-
-		
-
-		$this->WP_Widget( 'mt_soundstage_latest_photos', __( 'Latest Photos', 'mt_soundstage_translation' ), $widget_ops );
-
-		$this->alt_option_name = 'mt_soundstage_latest_photos';
-
-
-
-		add_action( 'save_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'deleted_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'switch_theme', array(&$this, 'flush_widget_cache' ) );
-
+		parent::__construct( 'mt_soundstage_latest_photos',  __( 'Display latest photos', 'mt_soundstage_translation' ), $widget_ops );
 	}
 
 
@@ -107,7 +92,7 @@ class mt_soundstage_Latest_photos extends WP_Widget {
 
 
 			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Latest Photos', 'mt_soundstage_translation' ) : $instance['title'], $instance, $this->id_base);
-			
+
 
 
 			echo $before_widget;
@@ -124,17 +109,17 @@ class mt_soundstage_Latest_photos extends WP_Widget {
 
 			  <div class="block-photos">
 				 <?php
-					$args = array( 
+					$args = array(
 						'cat' => of_get_option('cap_photos_category'),
 						'showposts' => 1,
-						
+
 					);
 					$num = 0;
 					$photos = new WP_Query($args);
 					if($photos->have_posts() ) :
 						while( $photos->have_posts() ) : $photos->the_post()
 						?>
-                       
+
 						 <ul class="photo-list visual">
 								<?php
                                 $args = array(
@@ -142,7 +127,7 @@ class mt_soundstage_Latest_photos extends WP_Widget {
                                     'numberposts' => -1,
                                     'post_status' => null,
                                     'post_parent' => get_the_ID()
-                                    ); 
+                                    );
                                 $attachments = get_posts($args);
                                 $currentAttachmentNum = 0;
                                 //
@@ -155,27 +140,27 @@ class mt_soundstage_Latest_photos extends WP_Widget {
                                         <img src="<?php echo aq_resize( $attachment1->guid, 92, 92, true );  ?>" width="92" height="92" alt=""/>
                                         <a href="<?php the_permalink(); ?>">&nbsp;</a>
                                     </li>
-                                     
+
                                      <?php if ($num == 6){break;} ?>
-                                    
+
                                 <?php } } ?>
 						</ul>
-					
-                    	
-					<?php 
+
+
+					<?php
 					endwhile;
 					wp_reset_postdata();
 					endif;
 					?>
               </div>
-			
+
 			<?php //END WIDGET OUTPUT
 
 			echo $after_widget;
 
-			
 
-		
+
+
 
 
 		if (!empty($args['widget_id'])){
@@ -201,7 +186,7 @@ class mt_soundstage_Latest_photos extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		
+
 
 		$this->flush_widget_cache();
 
@@ -238,8 +223,8 @@ class mt_soundstage_Latest_photos extends WP_Widget {
 	function form( $instance ) {
 
 		$title = isset( $instance['title']) ? esc_attr( $instance['title'] ) : '';
-		
-		
+
+
 
 ?>
 
@@ -256,8 +241,3 @@ class mt_soundstage_Latest_photos extends WP_Widget {
 }
 
 //register widget in functions.php - function name: mt_soundstage_widgets_init
-
-
-
-
-

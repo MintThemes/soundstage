@@ -2,7 +2,7 @@
 Theme Name: Soundstage
 Theme URI: http://mintthemes.com
 Description: A theme for Bands
-Version: 1.0.4.8
+Version: 1.0.4.9
 Author: Mint Themes
 Author URI: http://mintthemes.com
 License: GNU General Public License
@@ -170,7 +170,7 @@ q:after{content:"";}
 }
 /*push */
 #push{
-	height:452;	
+	height:452;
 }
 /* header */
 #header{
@@ -181,7 +181,7 @@ q:after{content:"";}
 	display:table;
 	max-width: 1000px;
  	margin: 0 auto;
-	
+
 	height:106px;
 	z-index:10;
 	background:url(css/images/bg-header02.png) repeat-x 0 100%;
@@ -247,7 +247,7 @@ q:after{content:"";}
 #menu-main-navigation > li:hover > ul{left:1px !important;}
 #menu-main-navigation > li > ul{
 	z-index: 99999999;
-  	text-align: left;	
+  	text-align: left;
 	left:-9999px;
 	top:78px;
 }
@@ -305,7 +305,7 @@ q:after{content:"";}
 	position: absolute;
 	top: 50%;
 	cursor: pointer;
-	text-indent: -999em;	
+	text-indent: -999em;
 }
 
 #main .flex-nav-container{
@@ -354,7 +354,7 @@ q:after{content:"";}
 	margin-bottom:15px;
 }
 .items-holder .item-block{
-	min-height: 350px;	
+	min-height: 350px;
 }
 .item-block, .footer-block{width:306px;}
 .item-block h2, .widget_title{
@@ -507,11 +507,11 @@ q:after{content:"";}
 	color:#FEFEFE;
 }
 .jp-interface{
-	position:relative;	
+	position:relative;
 }
 .player-pause,
 .player-next,
-.player-prev, 
+.player-prev,
 .jp-play,
 .jp-previous,
 .jp-next,
@@ -526,7 +526,7 @@ q:after{content:"";}
 	top:20px;
 }
 .jp-progress{
-	width:124px;	
+	width:124px;
 }
 .player-prev:hover, .jp-previous:hover{background-position:0 -10px;}
 .player-next, .jp-next{
@@ -551,7 +551,7 @@ q:after{content:"";}
 	background:url(css/images/player-track.png) no-repeat;
 	top:22px;
 	left:147px;
-	padding:0 3px;	
+	padding:0 3px;
 	margin-top:-80px;
 }
 .player-track, .jp-seek-bar{
@@ -592,7 +592,7 @@ q:after{content:"";}
 	color:#808080;
 }
 .slash{
-	left:210px;	
+	left:210px;
 }
 .jp-duration{
 	position:absolute;
@@ -1115,7 +1115,7 @@ body .product-quantity .quantity.buttons_added .qty,
 
 input.button,
 #respond input#submit,
-.submit, 
+.submit,
 input[type=submit]{
 	overflow:hidden;
 	cursor:pointer;
@@ -1140,10 +1140,10 @@ input[type=submit]{
 	text-transform:uppercase;
 }
 input[type=submit]{
-	height:49px;	
+	height:49px;
 }
-input[type=submit]:hover, 
-.submit:hover, 
+input[type=submit]:hover,
+.submit:hover,
 .buttoncustom:hover,
 #respond input#submit:hover{
 	background:url(css/images/bg-submit.gif) repeat-x;
@@ -1406,7 +1406,7 @@ input[type=submit]:hover,
 	margin:0;
 	padding:0 0 21px;
 }
-input[type=text], 
+input[type=text],
 #content .gform_wrapper .gform_body .gform_fields input[type=text],
 input[type="password"]{
 	clear:left;
@@ -1455,7 +1455,7 @@ input[type="password"]{
 .comments-list .visual a{
 	-moz-opacity: 1 !important;
 	-khtml-opacity: 1 !important;
-	opacity: 1 !important; 
+	opacity: 1 !important;
 }
 .comments-list .text{
 	display:table-cell;
@@ -1544,9 +1544,9 @@ ul.page-numbers li, .page-numbers-holder>ul li{
 	float:left;
 	padding:0 9px 0 0;
 }
-ul.page-numbers a, 
+ul.page-numbers a,
 ul.page-numbers .current,
-.page-numbers-holder>ul a, 
+.page-numbers-holder>ul a,
 .page-numbers-holder>ul span{
 	display:block;
 	height:11px;
@@ -1794,9 +1794,9 @@ body .button:hover,
 	margin-top:5px;
 }
 .aligncenter{
-	display: block;   
-	margin-left: auto;   
-	margin-right: auto; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom:10px;
 }
 .sticky{
@@ -1809,7 +1809,7 @@ body .button:hover,
 	text-align:center;
 }
 .bypostauthor{
-	text-align:center;	
+	text-align:center;
 }
 #reply-title, .form-allowed-tags, .comment-form-author label, .comment-form-email label, .comment-form-url label, .comment-form-comment label{
 	display:none;
@@ -1870,7 +1870,7 @@ div.product span.price {
 	background: none !important;
 }
 
-table.cart td.actions .coupon .input-text, 
+table.cart td.actions .coupon .input-text,
 #content table.cart td.actions .coupon .input-text {
 	padding: 7px;
 }
@@ -1893,8 +1893,8 @@ table.shop_table td.product-quantity  {
 .woocommerce-message .button{
 	margin-right:10px!important;
 }
-.woocommerce_message::before, 
-.woocommerce_error::before, 
+.woocommerce_message::before,
+.woocommerce_error::before,
 .woocommerce_info::before {
 	top: 50%;
 	margin-top: -8px;
@@ -1911,10 +1911,10 @@ table.shop_table td.product-quantity  {
 	clear: both;
 }
 
-div.product form.cart .variations, 
+div.product form.cart .variations,
 #content div.product form.cart .variations,
 .single_variation_wrap .row,
-div.product form.cart, 
+div.product form.cart,
 #content div.product form.cart {
 	margin-bottom: 0;
 }
@@ -1954,7 +1954,7 @@ div.product form.cart,
 }
 
 #jp_playlist_main ul li a{
-	color:#3C3E3F;	
+	color:#3C3E3F;
 }
 .prev{
 	display:none;
@@ -1980,7 +1980,7 @@ div.product form.cart,
 }
 
 .product .thumbnails{
-	display:none;	
+	display:none;
 }
 
 .summary .entry-title, .reset_variations{
@@ -1994,15 +1994,15 @@ div.product form.cart,
 }
 .related .products .visual img{
 	max-width:222px;
-	max-height:193px;	
+	max-height:193px;
 }
 .catalog{
-	margin-left:-70px!important;	
+	margin-left:-70px!important;
 	font: 18px/20px WebfontBold, Arial, Helvetica, Sans-Serif;
 }
 .post-type-archive-product #content,
 .tax-product_cat #content{
-	width:100%;	
+	width:100%;
 }
 
 /* MP Menu Styling */
@@ -2011,12 +2011,12 @@ div.product form.cart,
     display: table-cell!important;
 }
 .menu-toggle{
-	display:none;	
+	display:none;
 }
 
 /* Hide Slide text on mobiles */
 @media (max-width: 600px){
 	.slides span{
-		display:none!important;	
+		display:none!important;
 	}
 }

@@ -14,15 +14,25 @@ get_header(); ?>
 		</div>
 		<div id="main"><!-- main -->
 			<div class="news">
-            
-         
+
+
 				<ul class="main_posts">
-                	<?php 
+                	<?php
 					$current_time = current_time('mysql');
-					list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = split( '([^0-9])', $current_time );
+					$current_time_parts = explode( '-', $current_time );
+					$second_explode = explode( ' ', $current_time_parts[2] );
+					$third_explode = explode( ':', $second_explode[1] );
+
+					$today_year = $current_time_parts[0];
+					$today_month = $current_time_parts[1];
+					$today_day = $second_explode[0];
+					$hour = $third_explode[0];
+					$minute = $third_explode[1];
+					$second = $third_explode[2];
+
 					$current_timestamp = $today_year . $today_month . $today_day . $hour . $minute;
 					$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-					$args = array( 
+					$args = array(
 					'meta_query' => array(
 						array(
 							'key' => '_start_eventtimestamp',
@@ -40,7 +50,7 @@ get_header(); ?>
 					if($events->have_posts() ) :
 						while( $events->have_posts() ) : $events->the_post() ?>
 
-					
+
         			<li id="post-<?php the_ID(); ?>" <?php post_class('main_posts_li'); ?>>
 						<div class="visual">
 							<?php
@@ -64,10 +74,7 @@ get_header(); ?>
 				</ul>
 			</div>
              <?php get_template_part ('includes/pagination'); ?>
-			
-		</div><!-- end main -->
-       
-<?php get_footer(); ?>
 
-                
-   
+		</div><!-- end main -->
+
+<?php get_footer(); ?>

@@ -19,44 +19,16 @@
 class mt_soundstage_Social_links extends WP_Widget {
 
 
-
 	/**
-
-	 * Constructor
-
-	 *
-
-	 * @return void
-
-	 **/
-
-	function mt_soundstage_Social_links () {
-
-		$widget_ops = array( 
-
-			'classname' => 'mt_soundstage_social_links', 
-
-			'description' => __( 'Display links to social networks.', 'mt_soundstage_translation' ) 
-
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		$widget_ops = array(
+			'classname' => 'mt_soundstage_social_links',
+			'description' =>  __( 'Display links to social networks', 'mt_soundstage_translation' ),
 		);
-
-		
-
-		$this->WP_Widget( 'mt_soundstage_social_links', __( 'Social Links', 'mt_soundstage_translation' ), $widget_ops );
-
-		$this->alt_option_name = 'mt_soundstage_social_links';
-
-
-
-		add_action( 'save_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'deleted_post', array(&$this, 'flush_widget_cache' ) );
-
-		add_action( 'switch_theme', array(&$this, 'flush_widget_cache' ) );
-
+		parent::__construct( 'mt_soundstage_social_links',  __( 'Display links to social networks', 'mt_soundstage_translation' ), $widget_ops );
 	}
-
-
 
 	/**
 
@@ -146,16 +118,16 @@ class mt_soundstage_Social_links extends WP_Widget {
                  <?php if ($flickr != ""){ if ($instance['flickr'] != ""){?>
 					<li><a class="alt05" href="<?php echo $instance['flickr'] ?>"><?php _e('Flickr', 'mt_soundstage_translation'); ?></a></li>
                  <?php } }?>
-				 
+
 			</ul>
-			
+
 			<?php //END WIDGET OUTPUT
 
 			echo $after_widget;
 
-			
 
-		
+
+
 
 
 
@@ -186,7 +158,7 @@ class mt_soundstage_Social_links extends WP_Widget {
 		$instance['flickr'] = strip_tags( $new_instance['flickr'] );
 		$instance['youtube'] = strip_tags( $new_instance['youtube'] );
 		$instance['googleplus'] = strip_tags( $new_instance['googleplus'] );
-		
+
 
 		$this->flush_widget_cache();
 
@@ -223,14 +195,14 @@ class mt_soundstage_Social_links extends WP_Widget {
 	function form( $instance ) {
 
 		$title = isset( $instance['title']) ? esc_attr( $instance['title'] ) : '';
-		
+
 		$twitter = isset( $instance['twitter']) ? esc_attr( $instance['twitter'] ) : '';
 		$vimeo = isset( $instance['vimeo']) ? esc_attr( $instance['vimeo'] ) : '';
 		$facebook = isset( $instance['facebook']) ? esc_attr( $instance['facebook'] ) : '';
 		$youtube = isset( $instance['youtube']) ? esc_attr( $instance['youtube'] ) : '';
 		$flickr = isset( $instance['flickr']) ? esc_attr( $instance['flickr'] ) : '';
 		$googleplus = isset( $instance['googleplus']) ? esc_attr( $instance['googleplus'] ) : '';
-		
+
 
 ?>
 
@@ -244,20 +216,20 @@ class mt_soundstage_Social_links extends WP_Widget {
 			<p><label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php _e( 'Twitter URL:', 'mt_soundstage_translation' ); ?></label>
 
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" type="text" value="<?php echo esc_attr( $twitter ); ?>" /></p>
-           
+
 
 <?php //vimeo ?>
 
 			<p><label for="<?php echo esc_attr( $this->get_field_id( 'vimeo' ) ); ?>"><?php _e( 'Vimeo URL:', 'mt_soundstage_translation' ); ?></label>
 
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'vimeo' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'vimeo' ) ); ?>" type="text" value="<?php echo esc_attr( $vimeo ); ?>" /></p>
-            
+
 <?php //facebook ?>
 
 			<p><label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>"><?php _e( 'Facebook URL:', 'mt_soundstage_translation' ); ?></label>
 
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'facebook' ) ); ?>" type="text" value="<?php echo esc_attr( $facebook ); ?>" /></p>
-            
+
 <?php //youtube ?>
 
 			<p><label for="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>"><?php _e( 'YouTube URL:', 'mt_soundstage_translation' ); ?></label>
@@ -269,7 +241,7 @@ class mt_soundstage_Social_links extends WP_Widget {
 			<p><label for="<?php echo esc_attr( $this->get_field_id( 'flickr' ) ); ?>"><?php _e( 'Flickr URL:', 'mt_soundstage_translation' ); ?></label>
 
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'flickr' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'flickr' ) ); ?>" type="text" value="<?php echo esc_attr( $flickr ); ?>" /></p>
-            
+
 <?php //googleplus ?>
 
 			<p><label for="<?php echo esc_attr( $this->get_field_id( 'googleplus' ) ); ?>"><?php _e( 'Google+ URL:', 'mt_soundstage_translation' ); ?></label>

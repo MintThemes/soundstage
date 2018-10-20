@@ -175,7 +175,7 @@ function mt_soundstage_eventposttype_get_the_event_date() {
 	$minute = str_split($date, 10);
 	$minute = str_split($minute[1], 2);
 	$minute = $minute[0];
-	
+
     $eventdate = mt_soundstage_eventposttype_get_the_month_abbr($month);
     $eventdate .= ' ' . $day . ',';
     $eventdate .= ' ' . $year;
@@ -208,7 +208,7 @@ function mt_soundstage_eventposttype_get_the_event_date_without_hour() {
 	$minute = str_split($date, 10);
 	$minute = str_split($minute[1], 2);
 	$minute = $minute[0];
-	
+
     $eventdate = mt_soundstage_eventposttype_get_the_month_abbr($month);
     $eventdate .= ' ' . $day . ',';
     $eventdate .= ' ' . $year;
@@ -239,7 +239,7 @@ function mt_soundstage_eventposttype_get_the_event_date_without_year() {
 	$minute = str_split($date, 10);
 	$minute = str_split($minute[1], 2);
 	$minute = $minute[0];
-	
+
     $eventdate = mt_soundstage_eventposttype_get_the_month_abbr($month);
     $eventdate .= ' ' . $day;
     echo $eventdate;
@@ -250,7 +250,18 @@ function mt_soundstage_eventposttype_get_the_event_time_only() {
     global $post;
     $eventdate = '';
 	$date =  get_post_meta($post->ID, '_start_eventtimestamp', true);
-	//hour
+    //month
+    $month = str_split($date, 4);
+	$month = str_split($month[1], 2);
+	$month = $month[0];
+	//year
+	$year = str_split($date, 4);
+	$year = $year[0];
+	//day
+	$day = str_split($date, 6);
+	$day = str_split($day[1], 2);
+	$day = $day[0];
+    //hour
 	$hour = str_split($date, 8);
 	$hour = str_split($hour[1], 2);
 	$hour = $hour[0];
@@ -258,12 +269,12 @@ function mt_soundstage_eventposttype_get_the_event_time_only() {
 	$minute = str_split($date, 10);
 	$minute = str_split($minute[1], 2);
 	$minute = $minute[0];
-	
+
     $eventdate = mt_soundstage_eventposttype_get_the_month_abbr($month);
-	
+
 	$time_string = strtotime( $hour . ':' . $minute );
     echo date( 'g:ia', $time_string );
-	
+
     //$eventdate .= $hour;
     //$eventdate .= ':' . $minute;
     //echo $eventdate;
